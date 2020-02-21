@@ -16,7 +16,7 @@ def getLesson(start, end):
         print(url)
         print(titles)
         for title in titles:
-            if "九年级" in title:
+            if "九年级" in title or "初三" in title:
                 threadLock.acquire()
                 lessonFile.write(title + "\n")
                 lessonFile.write(url + "\n")
