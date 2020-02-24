@@ -5,6 +5,7 @@ from lxml import etree
 
 threadLock = threading.Lock()
 lessonFile = open("lesson.txt", "w+", encoding="utf-8")
+keyWord = input("请输入关键词:")
 
 def getLesson(start, end):
     for i in range(start, end):
@@ -16,7 +17,7 @@ def getLesson(start, end):
         print(url)
         print(titles)
         for title in titles:
-            if "九年级" in title or "初三" in title:
+            if keyWord in title:
                 threadLock.acquire()
                 lessonFile.write(title + "\n")
                 lessonFile.write(url + "\n")
