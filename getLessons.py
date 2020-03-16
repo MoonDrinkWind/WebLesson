@@ -6,7 +6,7 @@ from lxml import etree
 threadLock = threading.Lock()
 lessonFile = open("lesson.txt", "w+", encoding="utf-8")
 keyWord = input("请输入关键词:")
-url = "http://h5.nty.tv189.com/hv/C424{:0<5d}.html"
+url = "http://h5.nty.tv189.com/hv/C425{:0<5d}.html"
 
 def getLesson(start, end):
     for i in range(start, end):
